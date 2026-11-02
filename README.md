@@ -109,42 +109,7 @@ UML (Unified Modeling Language) — язык визуального модели
 - **Зависимость** — самая слабая: класс лишь использует другой.
 - Стрелка у ассоциации — направление навигации.
 
-### Схема (Mermaid, редактируется в тексте)
-
-```mermaid
-classDiagram
-  class Person{
-    <<abstract>>
-    -String name
-    +getName() String
-  }
-  class Customer{
-    +String email
-    +placeOrder() Order
-  }
-  class Order{
-    -Date date
-    +total() Money
-  }
-  class OrderLine{
-    -int qty
-  }
-  class Product{
-    +String title
-    +Money price
-  }
-  class Catalog
-  class Payment{
-    <<interface>>
-    +pay(Money)
-  }
-  Person <|-- Customer
-  Customer "1" --> "0..*" Order : делает
-  Order "1" *-- "1..*" OrderLine : состоит из
-  OrderLine "*" --> "1" Product : ссылается
-  Catalog "1" o-- "*" Product
-  Order ..> Payment : использует
-```
+<img width="760" height="410" alt="uml-3-class" src="https://github.com/user-attachments/assets/b932fba9-f761-4374-ba0c-1aea07a66307" />#
 *Наследование, ассоциация, композиция, агрегация, зависимость — в одном примере.*
 
 ### Нотация как в Visio
