@@ -29,7 +29,7 @@ UML (Unified Modeling Language) — язык визуального модели
 - **Extend** — необязательное расширение (стрелка к базовому).
 - **Обобщение** — наследование актёров или прецедентов.
 
-<img width="760" height="320" alt="uml-1-usecase" src="https://github.com/user-attachments/assets/2a484f06-21e8-453c-8c78-656b019d1c86" /># project_UML
+<img width="760" height="320" alt="uml-1-usecase" src="https://github.com/user-attachments/assets/2a484f06-21e8-453c-8c78-656b019d1c86" />#
 
 ### Нюансы
 
@@ -38,29 +38,6 @@ UML (Unified Modeling Language) — язык визуального модели
 - Стрелки include/extend направлены в противоположные стороны — частая путаница.
 - Внешняя система тоже актёр (платёжный шлюз).
 - Сама диаграмма мало информативна: ценность — в текстовом сценарии (предусловия, основной и альтернативные потоки, постусловия).
-  
-![Uploading<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 320" width="760" height="320"><title>Диаграмма прецедентов</title><style>text{font:12px "Segoe UI",Calibri,Arial,sans-serif;fill:#1f2d3d}.b{fill:#fff;stroke:#1f2d3d;stroke-width:1.3}.h{fill:#dbe5f1}.g{fill:#e8ecf1}.l{fill:none;stroke:#1f2d3d;stroke-width:1.3}.d{stroke-dasharray:6 4}.m{text-anchor:middle}.s{font-size:10.5px}.bd{font-weight:700}.i{font-style:italic}.u{text-decoration:underline}.k{fill:#1f2d3d}</style><defs>
-<marker id="ft" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="11" refY="5" orient="auto"><path d="M0,0L11,5L0,10z" fill="#1f2d3d"/></marker>
-<marker id="ar" markerUnits="userSpaceOnUse" markerWidth="12" markerHeight="10" refX="10" refY="5" orient="auto"><path d="M0,0L10,5L0,10" fill="none" stroke="#1f2d3d" stroke-width="1.3"/></marker>
-<marker id="tr" markerUnits="userSpaceOnUse" markerWidth="15" markerHeight="14" refX="14" refY="7" orient="auto"><path d="M0,0L14,7L0,14z" fill="#fff" stroke="#1f2d3d" stroke-width="1.3"/></marker>
-<marker id="df" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="10" refX="0" refY="5" orient="auto"><path d="M0,5L9,0L18,5L9,10z" fill="#1f2d3d"/></marker>
-<marker id="do" markerUnits="userSpaceOnUse" markerWidth="20" markerHeight="10" refX="0" refY="5" orient="auto"><path d="M0,5L9,0L18,5L9,10z" fill="#fff" stroke="#1f2d3d" stroke-width="1.3"/></marker>
-<g id="actor"><circle class="b" cx="0" cy="0" r="9"/><path class="l" d="M0,9V34M-14,18H14M0,34L-12,52M0,34L12,52"/></g>
-<g id="ci"><rect class="b" width="16" height="12"/><rect class="b" x="-4" y="2" width="8" height="3"/><rect class="b" x="-4" y="7" width="8" height="3"/></g>
-</defs><rect width="100%" height="100%" fill="#fff"/>
-<rect class="b" x="170" y="10" width="420" height="300"/><text x="180" y="28" class="bd">Интернет-магазин</text>
-<use href="#actor" x="70" y="110"/><text x="70" y="182" class="m">Клиент</text>
-<use href="#actor" x="690" y="200"/><text x="690" y="272" class="m">Платёжный шлюз</text>
-<ellipse class="b" cx="330" cy="55" rx="80" ry="28"/><text x="330" y="59" class="m">Авторизоваться</text>
-<ellipse class="b" cx="330" cy="150" rx="80" ry="28"/><text x="330" y="154" class="m">Оформить заказ</text>
-<ellipse class="b" cx="330" cy="250" rx="80" ry="28"/><text x="330" y="254" class="m">Оплатить</text>
-<ellipse class="b" cx="520" cy="150" rx="62" ry="28"/><text x="520" y="148" class="m">Применить</text><text x="520" y="162" class="m">промокод</text>
-<path class="l" d="M82,128L250,150"/><path class="l" d="M676,218L410,250"/>
-<path class="l d" d="M330,122V84" marker-end="url(#ar)"/><text x="336" y="106" class="s">«include»</text>
-<path class="l d" d="M330,178V221" marker-end="url(#ar)"/><text x="336" y="204" class="s">«include»</text>
-<path class="l d" d="M458,150H411" marker-end="url(#ar)"/><text x="434" y="141" class="s m">«extend»</text>
-</svg> uml-1-usecase.svg…]()
-
 
 *Пример: авторизация и оплата обязательны (include), промокод — по желанию (extend). Нотация передана средствами flowchart.*
 
@@ -97,25 +74,8 @@ UML (Unified Modeling Language) — язык визуального модели
 - Fork без Join допустим, но требует осознанных финалов потоков.
 - Не путать с диаграммой состояний: здесь узлы — действия, а не состояния объекта.
 
-### Схема (Mermaid, редактируется в тексте)
+<img width="760" height="430" alt="uml-2-activity" src="https://github.com/user-attachments/assets/235a9df6-eafc-4e26-8f93-531d7386cb3a" />
 
-```mermaid
-flowchart TD
-  st(( )) --> A[Принять заказ]
-  A --> D{Товар на складе?}
-  D -- нет --> N[Уведомить клиента]
-  D -- да --> F[" "]
-  F --> B[Собрать товар]
-  F --> C[Выставить счёт]
-  B --> J[" "]
-  C --> J
-  J --> E[Отправить заказ]
-  E --> en((◉))
-  N --> en
-  style st fill:#16222e,stroke:#16222e
-  style F fill:#b8400f,stroke:#b8400f
-  style J fill:#b8400f,stroke:#b8400f
-```
 *Тёмная точка — старт, оранжевые черты — Fork и Join: сборка и выставление счёта идут параллельно.*
 
 ### Нотация как в Visio
