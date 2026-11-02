@@ -1,5 +1,3 @@
-<img width="760" height="320" alt="uml-1-usecase" src="https://github.com/user-attachments/assets/2a484f06-21e8-453c-8c78-656b019d1c86" /># project_UML
-
 # Семь диаграмм UML
 
 Конспект лекции: назначение, элементы нотации, тонкие места, типичные ошибки и рабочие примеры. Сквозной кейс — интернет-магазин. Каждая диаграмма показана дважды: **Mermaid** (правится прямо в заметке) и **строгая нотация UML в стиле Visio** (SVG из папки `attachments`).
@@ -31,6 +29,7 @@ UML (Unified Modeling Language) — язык визуального модели
 - **Extend** — необязательное расширение (стрелка к базовому).
 - **Обобщение** — наследование актёров или прецедентов.
 
+<img width="760" height="320" alt="uml-1-usecase" src="https://github.com/user-attachments/assets/2a484f06-21e8-453c-8c78-656b019d1c86" /># project_UML
 
 ### Нюансы
 
